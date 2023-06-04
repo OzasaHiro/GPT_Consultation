@@ -1,1 +1,1 @@
-opneai
+openai==0.27.7
