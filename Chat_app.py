@@ -1,4 +1,5 @@
 import openai
+import json
 import streamlit as st
 from streamlit_chat import message
 import os 
@@ -42,6 +43,13 @@ def ProposeSolution(text):
     
     return message 
 
+#return json.dumps({prompt:response})
+
+#sends json event to newrelic
+def send_nr(prompt, response):
+    call = json.dumps({"eventType":"message", prompt:response})
+    #send call
+    
 
 st.title("ChatGPT-Security Consulting")
 #storing the chat
