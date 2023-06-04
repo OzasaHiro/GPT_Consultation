@@ -48,7 +48,7 @@ def ProposeSolution(text):
     return response 
 
 
-st.title("ChatGPT-Security Consulting")
+st.title("Cybersecurity Generative Agent")
 #storing the chat
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
