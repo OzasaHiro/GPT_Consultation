@@ -30,17 +30,22 @@ def get_completion(prompt, model="gpt-3.5-turbo",temperature=0): # Andrew mentio
 
 def ProposeSolution(text):
     prompt = f"""
-    Create solution for decribed in the review text: 
+    Create comment for decribed in the review text: 
+
+    Your comment should include the following items:
+    - Cyber attack or not (Yes or No)
+    - the type of cyber attack
+    - Recommendated solution
     
     Make your response as short as possible.
     
     Review Text: ```{text}```
     """
-    message = get_completion(prompt)
+    response = get_completion(prompt)
     #convert response to string
-    message = str(message)
+    response = str(response)
     
-    return message 
+    return response 
 
 
 st.title("ChatGPT-Security Consulting")
